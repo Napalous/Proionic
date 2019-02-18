@@ -1,0 +1,64 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+          Consultation Factures
+    </ion-card-header>  
+      <ion-card-content>
+
+          <ion-list no-line>
+            <ion-item>
+              <ion-input id="abon" type="number" placeholder="Numero Abonné"></ion-input>
+            </ion-item>                          
+          </ion-list>
+          <button ion-button (click)="getData()">Valider</button>
+      </ion-card-content> 
+      <ion-card-content no-padding>
+            <ion-grid> 
+              <ion-row>
+                <ion-col col col-1 style="font-size: 10px">
+                  ID 
+                </ion-col>
+                <ion-col col col-2 style="font-size: 10px">
+                      Mois
+                </ion-col>
+                <ion-col style="font-size: 9px;">
+                    Consommation
+                </ion-col>
+                <ion-col style="font-size: 10px ">
+                    Prix
+                </ion-col>
+                <ion-col col col-2 style="font-size: 10px">
+                    Reglement
+                </ion-col>
+                
+              </ion-row>
+      
+      
+              </ion-grid>
+      
+              <ion-grid>
+      
+                    <ion-row  *ngFor="let item of items" >
+      
+                   <ion-col col col-1  style="font-size:10px;">
+                 {{item.id}}
+                  </ion-col>
+                 <ion-col col col-2 style="font-size:10px">
+          {{item.mois}}
+                  </ion-col>
+                   <ion-col style="font-size:10px">
+          {{item.consommation}}
+                  </ion-col>
+                   <ion-col style="font-size:10px">
+          {{item.prix}}
+                  </ion-col>
+                   <ion-col col-2 style="font-size:10px">
+          {{item.reglement}}
+                  </ion-col>
+                  
+              </ion-row>
+      
+            </ion-grid>
+      
+          </ion-card-content>
+  </ion-card>
